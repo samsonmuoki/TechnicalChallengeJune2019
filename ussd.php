@@ -44,8 +44,6 @@ else if(isset($level[1]) && $level[1]!="" && !isset($level[2])){
 header('Content-type: text/plain');
 echo $response;
 
-
-// Specify the numbers that you want to send to in a comma-separated list
 // Please ensure you include the country code (+254 for Kenya in this case)
 $recipients = $phonenumber;
 
@@ -54,7 +52,7 @@ $recipients = $phonenumber;
 $message    = "You have successfully registered 'username=" . $username. ";" "email=" .$email. "";
 // Create a new instance of gateway class
 $gateway    = new AfricasTalkingGateway($username, $apikey);
-// Any gateway error will be captured by our custom Exception class below, 
+// Any gateway error will be captured by custom Exception class below, 
 // so wrap the call in a try-catch block
 try 
 { 
